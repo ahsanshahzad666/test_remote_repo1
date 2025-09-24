@@ -1,11 +1,34 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
- </head>
- <body>
-    
- </body>
- </html>
+<!--
+Netflix-like Home (split into 5 parts in a single file)
+NOTE: This is an original, simplified 'Netflix-style' homepage (no Netflix assets).
+Parts:
+Part 1: HTML skeleton & meta
+Part 2: Header / Navigation
+Part 3: Hero / Featured show
+Part 4: Movie rows (grid + simple carousel behavior)
+Part 5: Footer + minimal JS
+
+
+Copy this file as index.html and open in a browser. Replace placeholder images/text with your own.
+-->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<!-- === PART 1: HTML skeleton & meta === -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Streamify — Home</title>
+<style>
+/* Basic Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6e6e6;background:#000}
+
+
+/* === PART 2: Header / Navigation styles === */
+.site-header{position:fixed;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;z-index:40;backdrop-filter:blur(6px);background:linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.25))}
+.logo{font-weight:800;font-size:20px;letter-spacing:1px}
+.nav-actions{display:flex;gap:12px;align-items:center}
+.btn{background:transparent;border:1px solid rgba(255,255,255,0.12);padding:8px 12px;border-radius:6px;color:inherit;cursor:pointer}
+.search{width:220px;padding:6px 10px;border-radius:6px;border:none;background:rgba(255,255,255,0.06);color:inherit}
