@@ -112,3 +112,59 @@ html,body{height:100%;font-family:Inter, system-ui, -apple-system, 'Segoe UI', R
 <div class="card"><img src="https://picsum.photos/300/170?random=5" alt="poster"><div class="badge">4K</div></div>
 </div>
 </section>
+
+
+<section class="row">
+<h3>Because you watched Drama</h3>
+<div class="row-cards" id="row-drama">
+<div class="card"><img src="https://picsum.photos/300/170?random=6" alt="poster"></div>
+<div class="card"><img src="https://picsum.photos/300/170?random=7" alt="poster"></div>
+<div class="card"><img src="https://picsum.photos/300/170?random=8" alt="poster"></div>
+<div class="card"><img src="https://picsum.photos/300/170?random=9" alt="poster"></div>
+<div class="card"><img src="https://picsum.photos/300/170?random=10" alt="poster"></div>
+</div>
+</section>
+
+
+<!-- add as many rows as you like -->
+
+
+<!-- === PART 5: Footer (HTML) === -->
+<footer class="site-footer">
+<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+<div>
+<div style="font-weight:700;margin-bottom:8px">Questions? Call 1-800-STREAM</div>
+<div class="small">FAQ | Help Center | Terms of Use | Privacy</div>
+</div>
+<div class="small">© Streamify — Demo UI</div>
+</div>
+</footer>
+</main>
+
+
+<script>
+// === PART 5: Minimal JS for small interactions ===
+// 1) Simple auto-change hero background every 6 seconds (demo behavior)
+(function(){
+const hero = document.getElementById('hero');
+const images = [
+'https://picsum.photos/1400/700?image=1067',
+'https://picsum.photos/1400/700?image=1031',
+'https://picsum.photos/1400/700?image=1018'
+];
+let i=0;
+setInterval(()=>{ i=(i+1)%images.length; hero.style.backgroundImage = `url('${images[i]}')`; },6000);
+
+
+// 2) Small behaviour: click card to open modal (simple alert here)
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>{ alert('Open details for this title (demo)') }))
+
+
+// 3) Optional: keyboard shortcuts
+document.addEventListener('keydown', e=>{
+if(e.key === 'k') document.querySelector('.search').focus();
+})
+})();
+</script>
+</body>
+</html>
